@@ -22,5 +22,5 @@ class Movie:
     def get_movie_age(self):
         return 2020 - self.age
     
-    def __str__(self):
+    def __repr__(self):
         return f"{self.title} ({self.year})"
