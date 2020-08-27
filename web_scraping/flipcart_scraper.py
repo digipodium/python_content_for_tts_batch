@@ -68,13 +68,12 @@ if __name__ == "__main__":
                     dataset.append(data)
             else:
                 print("no products | closing scraper")
-                break
+                continue
         else:
             print("no page data | closing scraper")
-            break
+            continue
     else:
         print("scraper closed")
-    pd.set_option('display.width', 0)
     df = pd.DataFrame(dataset)
     df.to_excel('flipcart_face_masks.xlsx')
     print("saved successfully")
